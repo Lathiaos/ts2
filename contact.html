@@ -46,20 +46,33 @@
             </tr>
         </table>
         <h2>Formulaire de Contact</h2>
-        <form>
-            <div><label for="prenom-id">Prénom * :</label><input type="text" id="prenom-id" name="prenom" required></div>
-            <div><label for="nom-id">Nom * :</label><input type="text" id="nom-id" name="nom" required></div>
-            <div><label for="email-id">Email * :</label><input type="text" id="email-id" name="email" required></div>
-            <div><label for="adresse-id">Adresse * :</label><input type="text" id="adresse-id" name="adresse"></div>
-            <div><label for="npa-id">Code Postal :</label><input type="text" id="npa-id" name="npa"></div>
-            <div><label for="ville-id">Ville :</label><input type="text" id="ville-id" name="ville"></div>
+        <form id="form">
+            <div><label for="prenom">Prénom * :</label><input type="text" id="prenom" name="prenom" required></div>
+            <div><label for="nom">Nom * :</label><input type="text" id="nom" name="nom" required></div>
+            <div><label for="email">Email * :</label><input type="text" id="email" name="email" placeholder="votre.email@exemple.com"></div>
+            <div><label for="adresse">Adresse * :</label><input type="text" id="adresse" name="adresse"></div>
+            <div><label for="npa">Code Postal :</label><input type="text" id="npa" name="npa"></div>
+            <div><label for="ville">Ville :</label><input type="text" id="ville" name="ville"></div>
             <div>
-                <label for="message-id">Message * :</label>
-                <textarea rows="6" id="message-id" name="message" required></textarea>
+                <label for="message">Message * :</label>
+                <textarea rows="6" id="message" name="message" required></textarea>
             </div>
             <div style="margin: 0;"><input type="submit" id="button" value="Envoyer"></div>
             <p>* Champ Obligatoire</p>
         </form>
+        <div id="quit" style="display:none">
+            <h3>Quittance de réception</h3>
+            <p>Merci ! Voici les informations reçues :</p>
+            <ul>
+                <li><strong>Prenom : </strong><span id="quit-prenom"></span></li>
+                <li><strong>Nom : </strong><span id="quit-nom"></span></li>
+                <li><strong>Email : </strong><span id="quit-email"></span></li>
+                <li><strong>Adresse : </strong><span id="quit-adresse"></span></li>
+                <li><strong>Code Postal : </strong><span id="quit-npa"></span></li>
+                <li><strong>Ville : </strong><span id="quit-ville"></span></li>
+                <li><strong>Message : </strong><span id="quit-message"></span></li>
+            </ul>
+        </div>
     </main>
     <footer>
         <div>
@@ -75,5 +88,6 @@
             </nav>
         </div>
     </footer>
+    <script src="contact.js" defer></script>
 </body>
 </html>
